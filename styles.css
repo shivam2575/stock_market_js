@@ -1,0 +1,16 @@
+.border{
+    border: 5px solid black;
+}
+.center{
+    text-align: center;
+}
+#main-cont{
+    display: flex;
+    justify-content: center;
+}
+#sub-main-cont1{
+    width: 70%;
+}
+#stock-cont{
+    width: 30%;
+}
