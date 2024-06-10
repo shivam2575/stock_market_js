@@ -14,3 +14,9 @@
 #stock-cont{
     width: 30%;
 }
+.list-div{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3%;
+    width: 70%;
+}
