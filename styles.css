@@ -1,3 +1,7 @@
+header{
+    background-color: #89ABE3FF;
+    color: white;
+}
 .border{
     border: 5px solid black;
 }
@@ -7,19 +11,30 @@
 #main-cont{
     display: flex;
     justify-content: center;
+    padding: 2%;
+    background-color: #FCF6F5FF;
 }
 #sub-main-cont1{
     width: 70%;
 }
 #stock-cont{
     width: 30%;
+    padding: 2%;
 }
 .list-div{
     display: flex;
-    justify-content: space-evenly;
+    align-items: flex-start;
     margin: 3%;
     width: 70%;
 }
+.list-div button {
+    margin-right: 20px; /* Space between button and first span */
+    min-width: 100px; /* Set a minimum width for buttons to align them */
+  }
+  
+.list-div span {
+    margin-right: 20px; /* Space between spans */
+  }
 .details-heading{
     display: inline;
 }
@@ -27,4 +42,14 @@
     display: flex;
     justify-content: space-evenly;
     margin: 2%;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+
+#details-cont h3,span,p{
+    margin: 1.5%;
 }

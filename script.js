@@ -95,8 +95,13 @@ function addDetails(name, duration) {
       console.log(profitDetails);
       if (profitDetails) {
         $nameSpanEle.text(name);
-        $priceSpanEle.text(profitDetails.bookValue);
-        $profitSpanEle.text(profitDetails.profit);
+        $priceSpanEle.text(`$${profitDetails.bookValue}`);
+        $profitSpanEle.text(`${profitDetails.profit}%`);
+        if (profitDetails.profit.toFixed(2) > 0) {
+          $profitSpanEle.addClass("green");
+        } else {
+          $profitSpanEle.addClass("red");
+        }
       }
 
       //add chart details
@@ -143,8 +148,17 @@ function getList() {
       let profitDetails = profitList[stock];
       if (profitDetails) {
         const $stockNameEle = $("<button></button>").text(stock);
-        const $stockPriceEle = $("<span></span>").text(profitDetails.bookValue);
-        const $stockProfitEle = $("<span></span>").text(profitDetails.profit);
+        const $stockPriceEle = $("<span></span>").text(
+          `$${profitDetails.bookValue}`
+        );
+        const $stockProfitEle = $("<span></span>").text(
+          `${profitDetails.profit.toFixed(2)}%`
+        );
+        if (profitDetails.profit.toFixed(2) > 0) {
+          $stockProfitEle.addClass("green");
+        } else {
+          $stockProfitEle.addClass("red");
+        }
         $stockNameEle.click(() => {
           console.log("onclick event listner");
           addDetails(stock, "5y");
